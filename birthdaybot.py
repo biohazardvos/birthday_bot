@@ -38,10 +38,7 @@ def user_exists(name):
     check if user already in the DB
     '''
     qry = User.query.filter_by(name = name)
-    if qry.count() > 0:
-        return(True)
-    else:
-        return(False)
+    return qry.count() > 0
 
 def save_to_db(name, b_date):
     '''
