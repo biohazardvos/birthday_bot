@@ -7,3 +7,4 @@
 *Request:* Get /hello/\<username\>
 
 test
+test
