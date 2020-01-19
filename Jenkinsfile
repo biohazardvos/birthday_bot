@@ -18,10 +18,5 @@ pipeline {
         }
       }
     }
-    stage('build') {
-      steps {
-        ssh jenkins@docker_host 'docker-compose up -d --build'
-      }
-    }
   }
 }
