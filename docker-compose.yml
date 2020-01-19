@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  birthday_bot:
+    image: birthday_bot
+    volumes:
+      - ./app.db:/opt/birthday_bot/app.db
+    environment:
+      - DATABASE_URL=sqlite:////opt/birthday_bot/app.db
+    build: .
+    ports:
+      - 8000:8000
