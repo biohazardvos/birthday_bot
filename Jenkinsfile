@@ -20,7 +20,7 @@ pipeline {
     }
     stage('build') {
       steps {
-        sh 'docker-compose up -d --build'
+        ssh jenkins@docker_host 'docker-compose up -d --build'
       }
     }
   }
